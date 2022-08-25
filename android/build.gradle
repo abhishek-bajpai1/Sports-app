@@ -13,14 +13,14 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
+        google(google()  // Google's Maven repository)
         mavenCentral()
     }
 }
 
 rootProject.buildDir = '../build'
 subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.buildDir = "${rootProject.buildDir}/${sportznotebook.name}"
     project.evaluationDependsOn(':app')
 }
 
